@@ -216,14 +216,6 @@ const CV = () => {
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-3">CURRICULUM VITAE</h1>
         <p className="text-gray-600 mb-4">Développeur Fullstack • Recherche alternance septembre 2025</p>
-        
-        <button
-          onClick={handleDownloadPDF}
-          disabled={isDownloading}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors disabled:opacity-50"
-        >
-          {isDownloading ? '⏳ Génération...' : '📥 Télécharger PDF'}
-        </button>
       </div>
 
       {/* CV Content - FORMAT A4 STRICT */}
@@ -256,7 +248,7 @@ const CV = () => {
             <div className="text-center mb-2">
               <div className="w-20 h-20 mx-auto mb-1 overflow-hidden rounded-full shadow-lg">
                 <img 
-                  src="/src/assets/images/photoCv.jpg"
+                  src="/public/assets/images/photoCv.jpg"
                   alt="Photo de profil" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -551,6 +543,19 @@ const CV = () => {
           </div>
         </div>
       </div>
+
+      {/* bouton téléchargement */}
+      <div className="text-center mb-6">
+        
+        <button
+          onClick={handleDownloadPDF}
+          disabled={isDownloading}
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors disabled:opacity-50"
+        >
+          {isDownloading ? '⏳ Génération...' : '📥 Télécharger PDF'}
+        </button>
+      </div>
+
     </div>
   );
 };

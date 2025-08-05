@@ -9,13 +9,13 @@ import CV from '../Cv/CV'
 function App() {
   return (
     <div className="min-h-screen">
-      <CV />
       <Navbar />
       <Hero />
       <About />
       <Projects />
       <Skills />
       <Contact />
+      <CV />
     </div>
   )
 }
