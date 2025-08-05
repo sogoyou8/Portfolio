@@ -19,7 +19,7 @@ const CV = () => {
       localisation: "Paris, France",
       recherche: "Alternance Développeur - Septembre 2025",
       disponibilite: "Disponible immédiatement",
-      photo: "/src/assets/images/photoCv.jpg"
+      photo: "/assets/images/photoCv.jpg"
     },
     
     formation: [
