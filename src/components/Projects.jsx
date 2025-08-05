@@ -2,7 +2,7 @@ const Projects = () => {
   const projects = [
     {
       title: "B2DEV - E-commerce IA",
-      image: "public/assets/images/B2DEV.png",
+      image: "/assets/images/B2DEV.png",
       technologies: ["PHP", "MySQL", "JavaScript", "Chart.js", "Bootstrap", "API REST", "IA"],
       description: "E-commerce complet avec IA prédictive (régression linéaire), dashboard analytique temps réel, API REST et notifications intelligentes. Architecture POO professionnelle.",
       github: "https://github.com/sogoyou8/B2DEV",
@@ -24,7 +24,7 @@ const Projects = () => {
     },
     {
       title: "E-commerce Dynamique (Basique)",
-      image: "public/assets/images/E-Commerce-Dynamique.png",
+      image: "/assets/images/E-Commerce-Dynamique.png",
       technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
       description: "Site e-commerce avec gestion des utilisateurs, panier, favoris, commandes et back-office d'administration (CRUD).",
       github: "https://github.com/sogoyou8/e-commerce-dynamique",
@@ -57,7 +57,7 @@ const Projects = () => {
     },
     {
       title: "Space Shooter JS",
-      image: "public/assets/images/Projet JS.png",
+      image: "/assets/images/Projet JS.png",
       technologies: ["JavaScript", "HTML5 Canvas", "CSS3"],
       description: "Jeu d’arcade JavaScript où tu pilotes un vaisseau pour survivre à des vagues d’aliens et collecter des pouvoirs. Score, pause, bonus, et plus à venir !",
       github: "https://github.com/sogoyou8/Projet_JS",
