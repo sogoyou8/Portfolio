@@ -13,7 +13,7 @@ const Projects = () => {
     },
     {
       title: "Spotails",
-      image: "public/assets/images/spotails.png",
+      image: "/assets/images/spotails.png",
       technologies: ["React", "JavaScript", "CSS"],
       description: "Application web inspirée de Spotify avec interface moderne et fonctionnalités de lecture audio.",
       github: "https://github.com/DallasJr/Spotails",
