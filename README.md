@@ -52,22 +52,24 @@ Ce portfolio présente :
 
 ```
 Portfolio/
-├── public/                 # Fichiers publics
+├── public/                 # Fichiers publics (images, favicon, etc.)
+│   └── assets/
+│       └── images/
+│           └── photoCv.jpg # Place ici toutes tes images utilisées dans le code (ex: PNG, JPG)
 ├── src/
 │   ├── components/         # Composants React
-│   │   ├── Navbar.jsx     # Navigation principale
-│   │   ├── Hero.jsx       # Section d'accueil
-│   │   ├── About.jsx      # Section à propos
-│   │   ├── Projects.jsx   # Portfolio de projets
-│   │   ├── Skills.jsx     # Compétences techniques
-│   │   └── Contact.jsx    # Formulaire de contact
-│   ├── assets/            # Images et ressources
-│   ├── App.jsx            # Composant principal
-│   ├── main.jsx           # Point d'entrée
-│   └── index.css          # Styles Tailwind
-├── tailwind.config.js     # Configuration Tailwind
-├── postcss.config.js      # Configuration PostCSS
-└── package.json           # Dépendances et scripts
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
 ```
 
 ## 🎨 Sections du portfolio
