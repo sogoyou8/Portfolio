@@ -12,7 +12,7 @@ const CV = () => {
       titre: "Développeur Fullstack",
       age: "24 ans",
       email: "yoann.sogoyou.pro@gmail.com",
-      telephone: "07 81 85 83 92 000",
+      telephone: "07 81 85 83 92",
       linkedin: "linkedin.com/in/yoann-sogoyou",
       github: "github.com/sogoyou8",
       portfolio: window.location.origin,
@@ -248,7 +248,7 @@ const CV = () => {
             <div className="text-center mb-2">
               <div className="w-20 h-20 mx-auto mb-1 overflow-hidden rounded-full shadow-lg">
                 <img 
-                  src="/public/assets/images/photoCv.jpg"
+                  src="/assets/images/photoCv.jpg"
                   alt="Photo de profil" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
