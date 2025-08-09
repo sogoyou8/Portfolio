@@ -12,7 +12,7 @@ const CV = () => {
       titre: "Développeur Fullstack",
       age: "24 ans",
       email: "yoann.sogoyou.pro@gmail.com",
-      telephone: "07 81 85 83 92",
+      telephone: "07 81 85 83 92 000",
       linkedin: "linkedin.com/in/yoann-sogoyou",
       github: "github.com/sogoyou8",
       portfolio: window.location.origin,
