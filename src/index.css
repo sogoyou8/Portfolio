@@ -655,13 +655,18 @@ html {
     position: relative !important;
     left: 0 !important;
     top: 0 !important;
-    transform: scale(calc(100vw / 794));
+    transform: scale(
+      min(
+        calc(100vw / 794),
+        calc((100vh - 16px) / 1123)
+      )
+    );
     transform-origin: top center;
   }
   html, body, #root, .min-h-screen {
     min-height: 100vh !important;
     height: auto !important;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     background: #fff !important;
   }
 }
