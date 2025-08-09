@@ -655,18 +655,26 @@ html {
     position: relative !important;
     left: 0 !important;
     top: 0 !important;
+    /* Scale pour que le CV tienne dans l'écran (largeur OU hauteur) */
     transform: scale(
       min(
         calc(100vw / 794),
-        calc((100vh - 16px) / 1123)
+        calc((100vh - 32px) / 1123)
       )
     );
     transform-origin: top center;
+    /* Centrage vertical si possible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   html, body, #root, .min-h-screen {
     min-height: 100vh !important;
     height: auto !important;
     overflow: auto !important;
     background: #fff !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
