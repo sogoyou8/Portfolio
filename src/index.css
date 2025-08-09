@@ -647,17 +647,22 @@ html {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    overflow-x: hidden !important;
+    overflow-x: auto !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     position: static !important;
     left: unset !important;
     top: unset !important;
-    transform: none !important;
+    transform: scale(0.55); /* Ajuste ce ratio pour le zoom */
+    transform-origin: top center;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #fff !important;
   }
   html, body, #root, .min-h-screen {
     min-height: 100vh !important;
     height: auto !important;
     overflow: auto !important;
+    background: #fff !important;
   }
 }
