@@ -220,15 +220,13 @@ const CV = () => {
 
       {/* CV Content - FORMAT A4 STRICT */}
       <div className="max-w-4xl mx-auto px-4">
-        <div 
-          id="cv-content" 
-          className="bg-white shadow-lg"
-          style={{ 
-            width: '210mm', 
-            height: '297mm', // Hauteur fixe au lieu de minHeight
-            margin: '0 auto',
-            display: 'flex',
-            overflow: 'hidden',
+        <div
+          id="cv-content"
+          className="bg-white shadow-lg w-full h-auto md:w-[210mm] mx-auto flex overflow-hidden"
+          style={{
+            maxWidth: '100vw',
+            height: 'auto',
+            maxHeight: 'none',
           }}
         >
           
