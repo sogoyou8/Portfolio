@@ -666,7 +666,7 @@ html {
   html, body, #root, .min-h-screen {
     min-height: 100vh !important;
     height: auto !important;
-    overflow: hidden !important;
+    overflow: auto !important;
     background: #fff !important;
   }
 }
