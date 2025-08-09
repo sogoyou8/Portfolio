@@ -12,7 +12,7 @@ const CV = () => {
       titre: "Développeur Fullstack",
       age: "24 ans",
       email: "yoann.sogoyou.pro@gmail.com",
-      telephone: "07 81 85 83 92 0",
+      telephone: "07 81 85 83 92 00",
       linkedin: "linkedin.com/in/yoann-sogoyou",
       github: "github.com/sogoyou8",
       portfolio: window.location.origin,
@@ -210,7 +210,7 @@ const CV = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-4">
+    <div className="bg-gray-100">
       
       {/* Header avec bouton téléchargement */}
       <div className="text-center mb-6">
@@ -219,14 +219,16 @@ const CV = () => {
       </div>
 
       {/* CV Content - FORMAT A4 STRICT */}
-      <div className="max-w-4xl mx-auto px-4">
+      <div style={{ paddingLeft: 0, paddingRight: 0 }}>
         <div
           id="cv-content"
-          className="bg-white shadow-lg w-full h-auto md:w-[210mm] mx-auto flex overflow-hidden"
+          className="bg-white shadow-lg flex overflow-hidden"
           style={{
-            maxWidth: '100vw',
-            height: 'auto',
-            maxHeight: 'none',
+            width: '210mm',
+            minHeight: '297mm',
+            maxHeight: '297mm',
+            margin: 0,
+            boxSizing: 'border-box'
           }}
         >
           
@@ -543,8 +545,7 @@ const CV = () => {
       </div>
 
       {/* bouton téléchargement */}
-      <div className="text-center mb-6">
-        
+      <div className="text-center mt-4">
         <button
           onClick={handleDownloadPDF}
           disabled={isDownloading}
@@ -553,7 +554,6 @@ const CV = () => {
           {isDownloading ? '⏳ Génération...' : '📥 Télécharger PDF'}
         </button>
       </div>
-
     </div>
   );
 };
