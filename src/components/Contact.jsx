@@ -257,17 +257,15 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Formulaire CYBER avec CAPTCHA */}
           <div className="animate-slideInLeft">
-            <div className="form-rockstar relative overflow-hidden">
+            <div className="form-rockstar relative overflow-hidden w-full max-w-[95vw] sm:max-w-md mx-auto">
               {/* Effet de scan */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transform -translate-x-full animate-slide" style={{animationDuration: '3s'}}></div>
               
               <div className="relative z-10">
-                <h3 className="text-3xl font-black text-white mb-8 flex items-center">
+                <h3 className="text-3xl sm:text-3xl font-black text-white mb-8 flex flex-wrap items-center gap-x-2">
                   <span className="text-4xl mr-3 animate-bounce">🚀</span>
-                  ENVOYEZ UN MESSAGE
-                  <span className="ml-3 text-lg text-cyan-400">🛡️ Protégé</span>
-                </h3>
-
+                  <span className="break-words">ENVOYEZ UN MESSAGE</span>
+                  <span className="ml-0 sm:ml-3 block sm:inline text-lg text-cyan-400 whitespace-nowrap">🛡️ Protégé</span>                </h3>
                 {submitted ? (
                   <div className="text-center py-12 animate-fadeInUp">
                     <div className="text-6xl mb-4 animate-bounce">✅</div>
@@ -315,7 +313,7 @@ const Contact = () => {
                           value={formData.user_name}
                           onChange={handleChange}
                           placeholder="Votre nom..."
-                          className="input-rockstar group-hover:border-cyan-400/70"
+                          className="input-rockstar  group-hover:border-cyan-400/70"
                           required
                         />
                       </div>
@@ -371,29 +369,28 @@ const Contact = () => {
 
                     {/* 🤖 CAPTCHA ANTI-BOT */}
                     <div className="group">
-                      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-xl p-6">
-                        <label className="text-gray-300 mb-4 font-bold flex items-center text-lg">
+                      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-xl p-4 sm:p-6">
+                        <label className="text-gray-300 mb-4 font-bold flex flex-wrap items-center text-base sm:text-lg">
                           <span className="text-2xl mr-3">🤖</span>
-                          Vérification Anti-Bot
-                          <span className="ml-2 text-cyan-400 text-sm">(Prouvez que vous êtes humain)</span>
+                          <span className="break-words">Vérification Anti-Bot</span>
+                          <span className="ml-0 sm:ml-2 block w-full sm:w-auto text-cyan-400 text-sm whitespace-normal text-right sm:text-left">
+                            (Prouvez que vous êtes humain)
+                          </span>
                         </label>
-                        
-                        <div className="flex items-center space-x-4">
-                          <div className="bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-center min-w-[120px]">
+                        <div className="flex flex-col xs:flex-row xs:items-center gap-3 xs:gap-4 w-full">
+                          <div className="bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-center min-w-[100px] xs:min-w-[120px]">
                             <span className="text-xl font-black text-cyan-400 font-mono">
                               {captcha.question}
                             </span>
                           </div>
-                          
                           <input
                             type="number"
                             value={userCaptchaAnswer}
                             onChange={handleCaptchaChange}
                             placeholder="Réponse"
-                            className="input-rockstar w-24 text-center font-mono text-lg"
+                            className="input-rockstar w-full xs:w-24 text-center font-mono text-lg"
                             required
                           />
-                          
                           <button
                             type="button"
                             onClick={generateCaptcha}
@@ -403,14 +400,12 @@ const Contact = () => {
                             🔄
                           </button>
                         </div>
-                        
                         {captchaError && (
                           <p className="text-red-400 text-sm mt-2 flex items-center">
                             <span className="mr-2">❌</span>
                             {captchaError}
                           </p>
                         )}
-                        
                         <div className="mt-3 text-xs text-gray-400 flex items-center">
                           <span className="mr-2">💡</span>
                           Résolvez cette opération mathématique pour continuer
@@ -463,14 +458,14 @@ const Contact = () => {
                 COORDONNÉES
               </h3>
               
-              <div className="grid gap-6">
+              <div className="grid gap-3 sm:gap-6">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative bg-gradient-to-br from-gray-800/50 via-gray-900/50 to-black/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                    className="group relative w-full max-w-[95vw] sm:max-w-md bg-gradient-to-br from-gray-800/50 via-gray-900/50 to-black/50 backdrop-blur-xl rounded-xl sm:rounded-2xl p-2 sm:p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
                     style={{animationDelay: `${index * 0.1}s`}}
                   >
                     {/* Effet de glow */}
@@ -484,7 +479,7 @@ const Contact = () => {
                         <h4 className="text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300">
                           {info.title}
                         </h4>
-                        <p className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                          <p className="text-gray-300 group-hover:text-white transition-colors duration-300 break-all">
                           {info.value}
                         </p>
                       </div>

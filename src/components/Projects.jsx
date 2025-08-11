@@ -46,7 +46,7 @@ const Projects = () => {
     },
     {
       title: "API REST NINJA",
-      image: "https://via.placeholder.com/400x250/3b82f6/ffffff?text=API+REST",
+      image: "assets/images/projets-a-venir.jpg",
       technologies: ["PHP", "Symfony", "MySQL", "JWT"],
       description: "API REST ultra-sécurisée pour la gestion d'utilisateurs avec authentification JWT et documentation complète.",
       github: "#",
@@ -68,7 +68,7 @@ const Projects = () => {
     },
     {
       title: "Mobile App ROCKSTAR",
-      image: "https://via.placeholder.com/400x250/f59e0b/ffffff?text=Mobile+App",
+      image: "assets/images/projets-a-venir.jpg",
       technologies: ["React Native", "Firebase", "Redux"],
       description: "Application mobile cross-platform avec notifications push et synchronisation cloud.",
       github: "#",
@@ -79,7 +79,7 @@ const Projects = () => {
     },
     {
       title: "AI Bot WIZARD",
-      image: "https://via.placeholder.com/400x250/10b981/ffffff?text=AI+Bot",
+      image: "assets/images/projets-a-venir.jpg",
       technologies: ["Python", "OpenAI", "Flask", "Docker"],
       description: "Bot IA conversationnel avec traitement du langage naturel et apprentissage adaptatif.",
       github: "#",
@@ -232,25 +232,24 @@ const Projects = () => {
                   <p className="text-gray-300 mb-8 leading-relaxed">{project.description}</p>
                   
                   {/* Boutons avec effets CYBER */}
-                  <div className="flex space-x-4">
+                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full mt-4">
                     <a 
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-cyber group/btn"
+                      className="btn-cyber group/btn w-full flex items-center justify-center"
                     >
                       <span className="text-xl mr-2 group-hover/btn:animate-bounce">⚡</span>
                       <span>CODE</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover/btn:animate-pulse rounded-xl"></div>
                     </a>
-                    
                     <a
                       href="#"
                       onClick={e => {
                         e.preventDefault();
                         handleDemoClick(project.demo);
                       }}
-                      className="group/demo relative inline-flex items-center space-x-3 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-lg px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-lg hover:shadow-glow-cyber hover:scale-105"
+                      className="group/demo relative w-full flex items-center justify-center space-x-3 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-lg px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-lg hover:shadow-glow-cyber hover:scale-105"
                     >
                       <span className="text-xl group-hover/demo:animate-ping">🚀</span>
                       <span>{project.demo && project.demo !== "#" ? "DEMO" : "DEMO COMING SOON"}</span>
@@ -317,12 +316,12 @@ const Projects = () => {
                   
                   <p className="text-gray-300 text-sm mb-4 line-clamp-2">{project.description}</p>
                   
-                  <div className="flex space-x-3">
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full">
                     <a 
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-secondary text-sm flex-1 text-center"
+                      className="btn-secondary text-sm w-full flex items-center justify-center h-12"
                     >
                       Code
                     </a>
@@ -332,9 +331,10 @@ const Projects = () => {
                         e.preventDefault();
                         handleDemoClick(project.demo);
                       }}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm flex-1 text-center"
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm w-full flex items-center justify-center h-12"
                     >
-                      {project.demo && project.demo !== "#" ? "Demo" : "Demo Coming Soon"}
+                      <span className="text-xl mr-2">🚀</span>
+                      <span className="truncate">{project.demo && project.demo !== "#" ? "Demo" : "Demo Coming Soon"}</span>
                     </a>
                   </div>
                 </div>

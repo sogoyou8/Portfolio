@@ -42,8 +42,8 @@ const CV = () => {
         periode: "Mai - Juillet 2024",
         poste: "Stage Développeur",
         entreprise: "DJENA",
-        description: "Développement d'applications web, mise en pratique HTML, CSS, JavaScript, PHP et MySQL.",
-        competences: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"]
+        description: "Développement d'applications web, mise en pratique ",
+        competences: ["HTML5", "CSS3", "Express.js", "Node.js", "React", "PHP", "MySQL", "API REST"]
       }
     ],
 
@@ -109,7 +109,7 @@ const CV = () => {
       },
       {
         nom: "Spotails",
-        description: "Application web immersive mêlant cocktails et univers musical : découvrez, gérez et administrez des recettes de cocktails thématiques dans une interface moderne et animée.",
+        description: "Application web immersive mêlant cocktails et univers musical : découvrez, gérez et administrez des recettes de cocktails thématiques dans une interface moderne .",
         technologies: [
           "React", "Bootstrap", "Framer Motion",
           "Node.js", "Express.js", "MongoDB",
@@ -119,14 +119,14 @@ const CV = () => {
       },
       {
         nom: "Portfolio Personnel",
-        description: "Site portfolio responsive avec animations",
-        technologies: ["React", "Tailwind CSS", "Framer Motion"],
+        description: "Développement d’un portfolio moderne et responsive pour présenter mon parcours, mes compétences et une mise en avant des réalisations.",
+        technologies: ["React", "Tailwind CSS", "jsPDF", "html2canvas"],
         statut: "En ligne"
       },
       {
-        nom: "E-Commerce ",
-        description: "Site e-commerce complet",
-        technologies: ["React", "Node.js", "MongoDB", "Express"],
+        nom: "E-Commerce Dynamique",
+        description: "Développement d’une plateforme e-commerce complète en PHP orienté objet : gestion du catalogue produits, panier, commandes, factures PDF, favoris.",
+        technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "API REST"],
         statut: "Terminé"
       },
       {
