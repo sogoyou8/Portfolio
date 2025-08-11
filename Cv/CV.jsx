@@ -153,7 +153,7 @@ const CV = () => {
         },
         {
             skill: "Résolution de problèmes",
-            exemple: "Debug complexe d'APIs REST pendant le stage DJENA"
+            exemple: "Debug complexe d'APIs REST pendant le stage"
         },
 
     ],
@@ -161,8 +161,8 @@ const CV = () => {
     centresInteret: [
       "Football en club",
       "Sport",
-      "Mystere",
-      "casses-têtes",
+      "Mystère",
+      "Casses-têtes"
     ]
   };
 
@@ -225,7 +225,8 @@ const CV = () => {
               minHeight: '297mm',
               maxHeight: '297mm',
               margin: 0,
-              boxSizing: 'border-box'
+              boxSizing: 'border-box',
+              overflow: 'hidden',
             }}
           >
             
@@ -237,7 +238,8 @@ const CV = () => {
                 padding: '8px',
                 fontSize: '10px',
                 lineHeight: '1.2',
-                overflowY: 'hidden'
+               height: '100%',
+               overflowY: 'auto'
               }}
             >
               
