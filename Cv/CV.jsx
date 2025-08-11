@@ -149,7 +149,7 @@ const CV = () => {
         },
         {
             skill: "Esprit d'équipe", 
-            exemple: "Projets collaboratifs en binôme pendant la formation"
+            exemple: "Projets collaboratifs en binôme pendant la formation DJENA"
         },
         {
             skill: "Résolution de problèmes",
@@ -217,8 +217,7 @@ const CV = () => {
             <h1 className="text-3xl font-bold text-gray-800 mb-3">CURRICULUM VITAE</h1>
             <p className="text-gray-600 mb-4">Développeur Fullstack • Recherche alternance septembre 2025</p>
           </div>
-          <div
-            id="cv-content"
+          <div id="cv-content"
             className="bg-white shadow-lg flex overflow-hidden"
             style={{
               width: '210mm',
