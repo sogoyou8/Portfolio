@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import CV from '../Cv/CV'
+import CVscreenshot from '../Cv/CVscreenshot'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
-      <CV />
+      <CVscreenshot />
     </div>
   )
 }
