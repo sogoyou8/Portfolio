@@ -3,26 +3,26 @@ import { useEffect, useState } from 'react';
 const Skills = () => {
   // États pour le filtrage
   const [activeFilter, setActiveFilter] = useState('all');
-  const [highlightedSkills, setHighlightedSkills] = useState([]);
+  //const [highlightedSkills, setHighlightedSkills] = useState([]);
   const [filteredSkills, setFilteredSkills] = useState({});
 
   // 📊 DONNÉES DYNAMIQUES basées sur vos vraies compétences
   const skillsData = {
     frontend: [
-      { name: "React", level: 75, projects: 3, category: "library", icon: "⚛️", specialty: "Interface Moderne" },
-      { name: "JavaScript", level: 80, projects: 4, category: "language", icon: "⚡", specialty: "Code Dynamique" },
-      { name: "HTML5", level: 85, projects: 5, category: "markup", icon: "🏗️", specialty: "Structure Web" },
+      { name: "React", level: 70, projects: 3, category: "library", icon: "⚛️", specialty: "Interface Moderne" },
+      { name: "JavaScript", level: 60, projects: 4, category: "language", icon: "⚡", specialty: "Code Dynamique" },
+      { name: "HTML5", level: 80, projects: 5, category: "markup", icon: "🏗️", specialty: "Structure Web" },
       { name: "CSS3", level: 80, projects: 5, category: "styling", icon: "🎨", specialty: "Design Visuel" },
-      { name: "Bootstrap", level: 70, projects: 2, category: "framework", icon: "🅱️", specialty: "Style Rapide" },
-      { name: "Tailwind CSS", level: 65, projects: 1, category: "framework", icon: "🎯", specialty: "CSS Moderne" },
+      { name: "Bootstrap", level: 75, projects: 2, category: "framework", icon: "🅱️", specialty: "Style Rapide" },
+      { name: "Tailwind CSS", level: 50, projects: 1, category: "framework", icon: "🎯", specialty: "CSS Moderne" },
       { name: "Chart.js", level: 65, projects: 2, category: "library", icon: "📊", specialty: "Graphiques Dynamiques" }
     ],
     backend: [
       { name: "Node.js", level: 65, projects: 3, category: "runtime", icon: "🚀", specialty: "Serveur JS" },
-      { name: "Express.js", level: 62, projects: 3, category: "framework", icon: "🔧", specialty: "API Rapide" },
-      { name: "PHP", level: 65, projects: 2, category: "language", icon: "🔥", specialty: "Web Backend" },
-      { name: "Symfony", level: 55, projects: 1, category: "framework", icon: "⚔️", specialty: "Framework PHP" },
-      { name: "MySQL", level: 75, projects: 4, category: "database", icon: "💎", specialty: "Base de Données" },
+      { name: "Express.js", level: 65, projects: 3, category: "framework", icon: "🔧", specialty: "API Rapide" },
+      { name: "PHP", level: 80, projects: 2, category: "language", icon: "🔥", specialty: "Web Backend" },
+      { name: "Symfony", level: 40, projects: 1, category: "framework", icon: "⚔️", specialty: "Framework PHP" },
+      { name: "MySQL", level: 70, projects: 4, category: "database", icon: "💎", specialty: "Base de Données" },
       { name: "MongoDB", level: 50, projects: 1, category: "database", icon: "🍃", specialty: "Base NoSQL" },
       { name: "APIs REST", level: 60, projects: 2, category: "architecture", icon: "🔗", specialty: "Communication Web" },
       { name: "JWT", level: 60, projects: 2, category: "security", icon: "🔐", specialty: "Auth sécurisée" }
@@ -31,7 +31,7 @@ const Skills = () => {
       { name: "Git", level: 75, projects: 5, category: "version", icon: "🎯", specialty: "Contrôle Version" },
       { name: "npm", level: 70, projects: 4, category: "package", icon: "📦", specialty: "Gestionnaire Packages" },
       { name: "VS Code", level: 90, projects: 6, category: "editor", icon: "💻", specialty: "Éditeur Pro" },
-      { name: "phpMyAdmin", level: 70, projects: 3, category: "database", icon: "🗃️", specialty: "Admin DB" },
+      { name: "phpMyAdmin", level: 75, projects: 3, category: "database", icon: "🗃️", specialty: "Admin DB" },
       { name: "Postman", level: 75, projects: 4, category: "api", icon: "📡", specialty: "Tests API" },
       { name: "Figma", level: 60, projects: 2, category: "design", icon: "🎨", specialty: "Design UI" },
       { name: "Docker", level: 45, projects: 1, category: "devops", icon: "🐳", specialty: "Conteneurisation" },
@@ -168,41 +168,7 @@ const Skills = () => {
   return () => {
     window.removeEventListener('filterSkills', handleFilterSkills);
   };
-}, []);
-
-  // 🎨 FONCTIONS DE HIGHLIGHT
-  const highlightSkillsByCategory = (category) => {
-    // Mapping des catégories vers les compétences
-    const categoryMapping = {
-      frontend: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS'],
-      backend: ['Node.js', 'Express.js', 'PHP', 'Symfony', 'MySQL', 'MongoDB', 'APIs REST'],
-      fullstack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Node.js', 'Express.js', 'PHP', 'MySQL'],
-      devops: ['Git', 'Docker', 'Linux', 'npm'],
-      tools: ['Git', 'VS Code', 'phpMyAdmin', 'Postman', 'Figma'],
-      mobile: ['React Native', 'PWA'],
-      all: []
-    };
-
-    const skillsToHighlight = categoryMapping[category] || [];
-    
-    // Retire les anciens highlights
-    document.querySelectorAll('.skill-highlight').forEach(el => {
-      el.classList.remove('skill-highlight');
-    });
-    
-    // Applique les nouveaux highlights
-    skillsToHighlight.forEach(skill => {
-      const skillElement = document.querySelector(`[data-skill="${skill}"]`);
-      if (skillElement) {
-        skillElement.classList.add('skill-highlight');
-        setTimeout(() => {
-          skillElement.classList.remove('skill-highlight');
-        }, 3000);
-      }
-    });
-
-    setHighlightedSkills(skillsToHighlight);
-  };
+}, []);  
 
   // 🧮 CALCULS DYNAMIQUES - Mis à jour pour inclure mobile
   const getAllSkills = () => {
