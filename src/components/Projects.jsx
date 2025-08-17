@@ -6,7 +6,7 @@ const Projects = () => {
       technologies: ["PHP", "MySQL", "JavaScript", "Chart.js", "Bootstrap", "API REST", "IA"],
       description: "E-commerce complet avec IA prédictive (régression linéaire), dashboard analytique temps réel, API REST et notifications intelligentes. Architecture POO professionnelle.",
       github: "https://github.com/sogoyou8/B2DEV",
-      demo: "#", 
+      demo: "https://yoann-sogoyou.alwaysdata.net/", 
       featured: true,
       status: "🤖 AI",
       category: "AI/Fullstack"
@@ -252,7 +252,7 @@ const Projects = () => {
                       className="group/demo relative w-full flex items-center justify-center space-x-3 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-lg px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-lg hover:shadow-glow-cyber hover:scale-105"
                     >
                       <span className="text-xl group-hover/demo:animate-ping">🚀</span>
-                      <span>{project.demo && project.demo !== "#" ? "DEMO" : "DEMO COMING SOON"}</span>
+                      <span>{project.demo && project.demo !== "#" ? "Voir le site" : "DEMO COMING SOON"}</span>
                     </a>
                   </div>
                 </div>
@@ -334,7 +334,7 @@ const Projects = () => {
                       className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm w-full flex items-center justify-center h-12"
                     >
                       <span className="text-xl mr-2">🚀</span>
-                      <span className="truncate">{project.demo && project.demo !== "#" ? "Demo" : "Demo Coming Soon"}</span>
+                      <span className="truncate">{project.demo && project.demo !== "#" ? "Voir le site" : "Demo Coming Soon"}</span>
                     </a>
                   </div>
                 </div>
