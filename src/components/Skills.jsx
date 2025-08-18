@@ -29,6 +29,9 @@ const Skills = () => {
     ],
     tools: [
       { name: "Git", level: 75, projects: 5, category: "version", icon: "🎯", specialty: "Contrôle Version" },
+      { name: "FileZilla", level: 55, projects: 1, category: "ftp", icon: "🌐", specialty: "Transfert FTP/SFTP" },
+      { name: "Vercel", level: 75, projects: 1, category: "hosting", icon: "🚀", specialty: "Déploiement Frontend" },
+      { name: "AlwaysData", level: 75, projects: 1, category: "hosting", icon: "☁️", specialty: "Hébergement Web" },
       { name: "npm", level: 70, projects: 4, category: "package", icon: "📦", specialty: "Gestionnaire Packages" },
       { name: "VS Code", level: 90, projects: 6, category: "editor", icon: "💻", specialty: "Éditeur Pro" },
       { name: "phpMyAdmin", level: 75, projects: 3, category: "database", icon: "🗃️", specialty: "Admin DB" },
@@ -46,8 +49,11 @@ const Skills = () => {
   // 🛠️ OUTILS SUPPLÉMENTAIRES (style ROCKSTAR)
   const tools = [
     { name: "VS Code", category: "IDE", icon: "💻", level: "Expert" },
+    { name: "FileZilla", category: "FTP", icon: "🌐", level: "Intermédiaire" },
+    { name: "Vercel", category: "Hosting", icon: "🚀", level: "Avancé" },
+    { name: "AlwaysData", category: "Hosting", icon: "☁️", level: "Avancé" },
     { name: "Docker", category: "DevOps", icon: "🐳", level: "Débutant" },
-    { name: "Postman", category: "API", icon: "📡", level: "Avancé" },
+    { name: "Postman", category: "API", icon: "📡", level: "Intermédiaire" },
     { name: "phpMyAdmin", category: "Database", icon: "🗃️", level: "Intermédiaire" },
     { name: "GitHub", category: "Version", icon: "🐙", level: "Confirmé" },
     { name: "npm", category: "Package", icon: "📦", level: "Confirmé" },

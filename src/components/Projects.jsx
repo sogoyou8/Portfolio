@@ -4,7 +4,7 @@ const Projects = () => {
       title: "B2DEV - E-commerce IA",
       image: "/assets/images/B2DEV.png",
       technologies: ["PHP", "MySQL", "JavaScript", "Chart.js", "Bootstrap", "API REST", "IA"],
-      description: "E-commerce complet avec IA prédictive (régression linéaire), dashboard analytique temps réel, API REST et notifications intelligentes. Architecture POO professionnelle.",
+      description: "Plateforme e-commerce complète avec IA prédictive, dashboard analytics et API REST.",
       github: "https://github.com/sogoyou8/B2DEV",
       demo: "https://yoann-sogoyou.alwaysdata.net/", 
       featured: true,
@@ -96,7 +96,9 @@ const Projects = () => {
       "Backend": "from-green-500 via-teal-500 to-cyan-500",
       "Fullstack": "from-yellow-400 via-red-500 to-pink-500",
       "Mobile": "from-purple-500 via-pink-500 to-red-500",
-      "AI/ML": "from-cyan-400 via-blue-500 to-purple-600"
+      "AI/ML": "from-cyan-400 via-blue-500 to-purple-600",
+      "AI/Fullstack": "from-cyan-400 via-blue-500 to-purple-600"
+
     };
     return colors[category] || colors["Frontend"];
   };
