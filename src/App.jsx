@@ -4,7 +4,6 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
-/*import Blog from './components/Blog'*/
 import CV from '../Cv/CV'
 import CVscreenshot from '../Cv/CVscreenshot'
 
@@ -14,7 +13,6 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      {/*<Blog />*/}
       <Projects />
       <Skills />
       <Contact />
