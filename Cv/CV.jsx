@@ -23,8 +23,8 @@ const CV = () => {
     },
     
     formation: [
-      {periode: "2025- 2026",
-        diplome: "Bachelor 3 Informatique – Spécialisation Développement Web",
+      {periode: "2025 - 2026",
+        diplome: "Bachelor 3 Informatique Spécialisation Développement Web",
         etablissement: "Ynov Campus",
         description: "Spécialisation développement web (React, Node.js, gestion de bases de données SQL et MongoDB)"
 
