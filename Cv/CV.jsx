@@ -485,7 +485,8 @@ const CV = () => {
                           <h4 className="font-bold text-gray-800 text-sm">{form.etablissement}</h4>
                           <p className="text-blue-600 font-semibold text-sm">{form.diplome}</p>
                         </div>
-                        <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold inline-flex items-center justify-center" 
+                              style={{ minWidth: 64, textAlign: 'center' }}>
                           {form.periode}
                         </span>
                       </div>
