@@ -15,34 +15,40 @@ const CV = () => {
       telephone: "07 81 85 83 92",
       linkedin: "linkedin.com/in/yoann-sogoyou",
       github: "github.com/sogoyou8",
-      portfolio: window.location.origin,
+      portfolio: "yoann-sogoyou.vercel.app",
       localisation: "Paris, France",
-      recherche: "Alternance Développeur - Septembre 2025",
+      rythme: "Alternance 2 semaines entreprise / 1 semaine école",
       disponibilite: "Disponible immédiatement",
       photo: "/assets/images/photoCv.jpg"
     },
     
     formation: [
-      {
-        periode: "2024 - 2025",
-        diplome: "Bachelor 2 Informatique",
+      {periode: "2025 - 2026",
+        diplome: "Bachelor 3 Informatique – Spécialisation Développement Web",
         etablissement: "Ynov Campus",
-        description: "Approfondissement des compétences, projets collaboratifs et spécialisation technologique"
+        description: "Spécialisation développement web (React, Node.js, gestion de bases de données SQL et MongoDB)"
+
       },
       {
-        periode: "2023 - 2024", 
-        diplome: "Bachelor 1 Informatique",
+        periode: "2023 - 2025",
+        diplome: "Bachelor 1 et 2 Informatique",
         etablissement: "Ynov Campus",
-        description: "Découverte des fondamentaux de l'informatique, premiers projets de développement web"
+        description: "Découverte des fondamentaux de l'informatique, premiers projets de développement web, Approfondissement des compétences, projets collaboratifs et spécialisation technologique"
+      },
+      {
+        periode: "2022 - 2023", 
+        diplome: "Baccalauréat Systèmes Numériques (Option C )",
+        etablissement: "René Cassin",
+        description: "Obtention du diplôme, Formation axée sur les réseaux, les systèmes communicants et l'architecture des réseaux."
       }
     ],
 
     experience: [
       {
-        periode: "Mai - Juillet 2024",
+        periode: "Mai - Juillet 2025",
         poste: "Stage Développeur",
         entreprise: "DJENA",
-        description: "Développement d'applications web, mise en pratique ",
+        description: "Développement d’une API REST avec Node.js et Express.js pour la gestion des utilisateurs Intégration d’interfaces React en collaboration avec l’équipe UI/UX",
         competences: ["HTML5", "CSS3", "Express.js", "Node.js", "React", "PHP", "MySQL", "API REST"]
       }
     ],
@@ -54,6 +60,10 @@ const CV = () => {
         { nom: "CSS3", niveau: 85 }, 
         { nom: "JavaScript", niveau: 85 },
         { nom: "React", niveau: 80 },
+        { nom: "React Native", niveau: 40 },
+        { nom: "TypeScript", niveau: 40 },
+        { nom: "Next.js", niveau: 50 },
+        { nom: "Vue.js", niveau: 40 },
         { nom: "Tailwind CSS", niveau: 85 },
         { nom: "Bootstrap", niveau: 80 },
         { nom: "Framer Motion", niveau: 70 }
@@ -105,7 +115,7 @@ const CV = () => {
         nom: "Space Shooter JS",
         description: "Jeu d’arcade JavaScript où tu pilotes un vaisseau pour survivre à des vagues d’aliens et collecter des pouvoirs. Score, pause, bonus, et plus à venir !",
         technologies: ["JavaScript", "HTML5 Canvas", "CSS3"],
-        statut: "Terminé"
+        statut: "En ligne"
       },
       {
         nom: "Spotails",
@@ -127,14 +137,15 @@ const CV = () => {
         nom: "E-Commerce Dynamique",
         description: "Développement d’une plateforme e-commerce complète en PHP orienté objet : gestion du catalogue produits, panier, commandes, factures PDF, favoris.",
         technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "API REST"],
-        statut: "Terminé"
+        statut: "En ligne"
       },
       {
         nom: "FootPhysiqueTracker",
         description: "Application web pour joueurs de football amateurs : suivi des entraînements, objectifs physiques, statistiques, notifications et exports PDF/CSV.",
         technologies: ["React", "Node.js", "Express", "MySQL", "JWT", "Chart.js", "CSS3", "API REST"],
         statut: "En cours"
-      }
+      },
+      
     ],
 
     langues: [
@@ -149,7 +160,7 @@ const CV = () => {
         },
         {
             skill: "Esprit d'équipe", 
-            exemple: "Projets collaboratifs en binôme pendant la formation DJENA"
+            exemple: "Projets collaboratifs en binôme pendant le stage chez DJENA"
         },
         {
             skill: "Résolution de problèmes",
@@ -264,14 +275,14 @@ const CV = () => {
                 
                 <h1 className="text-sm font-bold mb-1">{cvData.profil.nom}</h1>
                 <div className="w-full h-0.5 bg-blue-400 mb-1"></div>
-                <h2 className="text-xs text-blue-200 font-semibold">{cvData.profil.titre}</h2>
-                <p className="text-xs text-gray-300">{cvData.profil.age}</p>
+                <h2 className="text-xl md:text-2xl lg:text-3xl text-blue-200 font-semibold">{cvData.profil.titre}</h2>
+                {/*<p className="text-xs text-gray-300">{cvData.profil.age}</p>*/}
               </div>
 
               {/* Recherche */}
-              <div className="mb-1.5 p-1 bg-blue-600 rounded text-center">
-                <p className="text-xs font-bold">🎯 {cvData.profil.recherche}</p>
-                <p className="text-xs text-blue-100">{cvData.profil.disponibilite}</p>
+              <div className="mb-1.5 p-1 rounded text-center">
+                <p className="text-xs font-bold">🎯 {cvData.profil.rythme}</p>
+                {/*<p className="text-xs text-blue-100">{cvData.profil.disponibilite}</p>*/}
               </div>
 
               {/* Contact */}
@@ -299,6 +310,10 @@ const CV = () => {
                   <div className="flex items-center space-x-1">
                     <span>🐙</span>
                     <span>{cvData.profil.github}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <span>🌐</span>
+                    <span className="break-all">{cvData.profil.portfolio}</span>
                   </div>
                 </div>
               </div>
@@ -389,7 +404,8 @@ const CV = () => {
               </div>
 
               {/* Other Skills */}
-              <div className="mb-1">
+              {/*
+                <div className="mb-1">
                 <h3 className="text-xs font-bold mb-1 text-yellow-200 border-b border-gray-600 pb-0.5">
                   🌟 AUTRES
                 </h3>
@@ -401,6 +417,7 @@ const CV = () => {
                   ))}
                 </div>
               </div>
+              */}
 
               {/* Atouts */}
               <div className="mb-1">
@@ -434,34 +451,35 @@ const CV = () => {
             </div>
 
             {/* COLONNE DROITE - 65% */}
-            <div className="flex-1" style={{ padding: '10px', fontSize: '11px', lineHeight: '1.3' }}>
+            <div className="flex-1" style={{ padding: '8px', fontSize: '10px', lineHeight: '1.2' }}>
               
               {/* Profil Professionnel */}
-              <div className="mb-3">
+              <div className="mb-2">
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-2 rounded">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                  <h3 className="text-base font-bold text-gray-800 mb-1 flex items-center">
                     <span className="mr-2">👨‍💻</span>
                     PROFIL PROFESSIONNEL
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Étudiant en <strong className="text-blue-600">Bachelor 2 Informatique</strong> avec une base solide. 
-                    Maîtrise des technologies modernes : <strong className="text-purple-600">React, Node.js, PHP, Docker</strong>.
-                    Expérience pratique en <strong className="text-green-600">développement web, APIs REST, IA, infrastructure réseau</strong>.
-                    Recherche une <strong className="text-orange-600">alternance dès septembre 2025</strong> pour approfondir mes compétences techniques.
+                    Étudiant en <strong className="text-blue-600">Bachelor 3 Informatique – Spécialisation Développement Web</strong> Passionné par les technologies 
+                    modernes et doté d’une solide base technique, je maîtrise <strong className="text-purple-600">React, Node.js, PHP, Docker</strong>.
+                    J’ai acquis une expérience concrète en <strong className="text-green-600">développement web, APIs REST, intelligence artificielle et infrastructure réseau</strong>.
+                    Je suis actuellement à la recherche d'une <strong className="text-orange-600">alternance dès que possible</strong> pour approfondir mes compétences et relever de 
+                    nouveaux défis techniques en environnement professionnel.
                   </p>
                 </div>
               </div>
 
               {/* Formations */}
-              <div className="mb-3">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center">
+              <div className="mb-2">
+                <h3 className="text-base font-bold text-gray-800 mb-1 flex items-center">
                   <span className="mr-2">🎓</span>
                   FORMATIONS
                   <div className="flex-1 h-px bg-blue-500 ml-4"></div>
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-1">
                   {cvData.formation.map((form, index) => (
-                    <div key={index} className="border border-gray-200 rounded-lg p-2">
+                    <div key={index} className="border border-gray-200 rounded p-1.5">
                       <div className="flex justify-between items-start mb-1">
                         <div>
                           <h4 className="font-bold text-gray-800 text-sm">{form.etablissement}</h4>
@@ -478,15 +496,15 @@ const CV = () => {
               </div>
 
               {/* Expériences */}
-              <div className="mb-3">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center">
+              <div className="mb-2">
+                <h3 className="text-base font-bold text-gray-800 mb-1 flex items-center">
                   <span className="mr-2">💼</span>
                   EXPÉRIENCES
                   <div className="flex-1 h-px bg-green-500 ml-4"></div>
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-1">
                   {cvData.experience.map((exp, index) => (
-                    <div key={index} className="bg-green-50 border border-green-200 rounded-lg p-2">
+                    <div key={index} className="bg-green-50 border border-green-200 rounded p-1.5">
                       <div className="flex justify-between items-start mb-1">
                         <div>
                           <h4 className="font-bold text-gray-800 text-sm">{exp.poste}</h4>
@@ -511,14 +529,14 @@ const CV = () => {
 
               {/* Projets */}
               <div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2 flex items-center">
+                <h3 className="text-base font-bold text-gray-800 mb-1 flex items-center">
                   <span className="mr-2">🚀</span>
                   PROJETS RÉALISÉS
                   <div className="flex-1 h-px bg-purple-500 ml-4"></div>
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-1">
                   {cvData.projets.map((projet, index) => (
-                    <div key={index} className="bg-purple-50 border border-purple-200 rounded-lg p-2">
+                    <div key={index} className="bg-purple-50 border border-purple-200 rounded p-1.5">
                       <div className="flex justify-between items-start mb-1">
                         <h4 className="font-bold text-gray-800 text-sm">{projet.nom}</h4>
                         <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-bold">
